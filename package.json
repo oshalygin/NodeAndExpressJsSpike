@@ -1,0 +1,24 @@
+{
+  "name": "node-express-spike",
+  "version": "1.0.0",
+  "description": "A spike for node and express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshalygin/NodeAndExpressJsSpike.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "spike"
+  ],
+  "author": "oshalygin@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oshalygin/NodeAndExpressJsSpike/issues"
+  },
+  "homepage": "https://github.com/oshalygin/NodeAndExpressJsSpike#readme"
+}
