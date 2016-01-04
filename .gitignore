@@ -7,11 +7,13 @@ bin
 obj
 /packages
 
-# Ignore Node & Bower
+# Ignore Node & Bower & DefinitelyTyped Packages
 ###################
 node_modules
 bower_components
 build
+typings/
+wwwroot/lib/
 #.tmp
 
 # Ignore Test reporters

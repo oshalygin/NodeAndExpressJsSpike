@@ -2,9 +2,10 @@
   "name": "node-express-spike",
   "version": "1.0.0",
   "description": "A spike for node and express.js",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/oshalygin/NodeAndExpressJsSpike/issues"
   },
-  "homepage": "https://github.com/oshalygin/NodeAndExpressJsSpike#readme"
+  "homepage": "https://github.com/oshalygin/NodeAndExpressJsSpike#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }

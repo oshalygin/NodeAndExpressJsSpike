@@ -1,0 +1,26 @@
+{
+  "name": "node-express-spike",
+  "description": "A spike for node and express.js",
+  "main": "server.js",
+  "authors": [
+    "oshalygin@gmail.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "express",
+    "spike"
+  ],
+  "homepage": "https://github.com/oshalygin/NodeAndExpressJsSpike",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
