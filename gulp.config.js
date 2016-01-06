@@ -1,6 +1,9 @@
 module.exports = function () {
+
+    var javaScriptFiles = ["*.js", "./src/**/*.js"];
+
     var config = {
-        jsFiles: ["*.js", "./src/**/*.js"],
+        jsFiles: javaScriptFiles,
         wiredepOptions: {
             bowerJson: require("./bower.json"),
             directory: "./wwwroot/lib",
@@ -10,6 +13,14 @@ module.exports = function () {
         viewSourceDirectory: "./src/views",
         injectOptions: {
             ignorePath : "/wwwroot"
+        },
+        nodeOptions: {
+            script: "server.js",
+            delayTime: 1,
+            env: {
+                "PORT" : 9999
+            },
+            watch: javaScriptFiles
         }
     };
 
