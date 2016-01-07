@@ -1,8 +1,9 @@
-var gulp = require("gulp");
-var config = require("./gulp.config.js")();
-var $ = require("gulp-load-plugins")({ lazy: true });
+"use strict";
+let gulp = require("gulp");
+let config = require("./gulp.config.js")();
+let $ = require("gulp-load-plugins")({ lazy: true });
 
-gulp.task("linting", function () {
+gulp.task("linting", () => {
     return gulp.src(config.jsFiles)
         .pipe($.jshint())
         .pipe($.jshint.reporter("jshint-stylish", {
@@ -12,11 +13,11 @@ gulp.task("linting", function () {
 
 });
 
-gulp.task("inject", function () {
+gulp.task("inject", () => {
 
-    var wiredep = require("wiredep").stream;
+    let wiredep = require("wiredep").stream;
 
-    var htmlInject = gulp.src(["./wwwroot/css/*.css", "./wwwroot/js/*.js"], { read: false });
+    let htmlInject = gulp.src(["./wwwroot/css/*.css", "./wwwroot/js/*.js"], { read: false });
 
 
     return gulp.src(config.htmlFiles)
@@ -26,9 +27,9 @@ gulp.task("inject", function () {
 
 });
 
-gulp.task("serve", ["linting", "inject"], function () {
+gulp.task("serve", ["linting", "inject"], () => {
     return $.nodemon(config.nodeOptions)
-        .on("restart", function () {
+        .on("restart", () => {
             console.log("Restarting....");
         });
 });
