@@ -2,6 +2,12 @@
 let gulp = require("gulp");
 let config = require("./gulp.config.js")();
 let $ = require("gulp-load-plugins")({ lazy: true });
+var taskListing = require('gulp-task-listing');
+
+
+gulp.task("default", ["help"]);
+gulp.task("help", taskListing);
+
 
 gulp.task("linting", () => {
     return gulp.src(config.jsFiles)
