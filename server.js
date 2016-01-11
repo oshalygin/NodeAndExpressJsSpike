@@ -4,7 +4,8 @@ let express = require("express");
 
 let app = express();
 app.use(express.static("wwwroot"));
-app.use(express.static("src/views"));
+// app.use(express.static("src/views"));
+
 
 let port = process.env.PORT || 9999;
 
