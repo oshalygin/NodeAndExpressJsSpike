@@ -12,12 +12,16 @@ app.set("view engine", "ejs");
 
 let port = process.env.PORT || 9999;
 
-var bookRouter = express.Router();
+let bookRouter = express.Router();
 
 bookRouter.route("/")
     .get(function (req, res) {
-        res.send("Hello Books");
-    });
+        res.render("books",{title: "Books",
+        nav: [
+            { Link: "/Books", Text: "Books" },
+            { Link: "/Authors", Text: "Authors" }
+        ]});
+
 bookRouter.route("/single")
     .get(function (req, res) {
         res.send("Hello Single Books");
