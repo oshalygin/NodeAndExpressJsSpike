@@ -12,14 +12,31 @@ app.set("view engine", "ejs");
 
 let port = process.env.PORT || 9999;
 
+var bookRouter = express.Router();
+
+bookRouter.route("/")
+    .get(function (req, res) {
+        res.send("Hello Books");
+    });
+bookRouter.route("/single")
+    .get(function (req, res) {
+        res.send("Hello Single Books");
+    });
+
+
+app.use("/Books", bookRouter);
+
 app.get("/", (request, response) => {
-    response.render("index", {title: "Derping from handlebars rendering", list: ["a", "b"] });
+    response.render("index", {title: "Derping from handlebars rendering",
+        nav: [
+            { Link: "/Books", Text: "Books" },
+            { Link: "/Authors", Text: "Authors" }
+        ]});
 });
 
-app.get("/books", (request, response) => {
-    response.send("Hello World");
-});
-
+// app.get("/books", (request, response) => {
+//     response.send("Hello World");
+// });
 
 
 app.listen(port, (error) => {
